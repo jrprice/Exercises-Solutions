@@ -132,17 +132,17 @@ int main(int argc, char *argv[])
         printf("\nThe calculation ran in %lf seconds\n", rtime);
         printf(" pi = %f for %d steps\n", pi_res, nsteps);
 
-        }
-        catch (cl::Error err) {
-            std::cout << "Exception\n";
-            std::cerr
-            << "ERROR: "
-            << err.what()
-            << "("
-            << err_code(err.err())
-            << ")"
-            << std::endl;
-        }
+    }
+    catch (cl::Error err) {
+        std::cout << "Exception\n";
+        std::cerr
+        << "ERROR: "
+        << err.what()
+        << "("
+        << err_code(err.err())
+        << ")"
+        << std::endl;
+    }
 
 #if defined(_WIN32) && !defined(__MINGW32__)
     system("pause");
