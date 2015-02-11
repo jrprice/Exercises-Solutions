@@ -91,10 +91,11 @@ int main(void)
   catch (cl::Error err)
   {
     std::cout << "OpenCL Error: " << err.what() << " returned " << err_code(err.err()) << std::endl;
-    std::cout << "Check cl.h for error codes." << std::endl;
-    exit(-1);
   }
 
-  return 0;
+#if defined(_WIN32) && !defined(__MINGW32__)
+  system("pause");
+#endif
 
+  return 0;
 }
