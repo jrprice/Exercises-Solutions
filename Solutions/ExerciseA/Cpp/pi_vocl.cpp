@@ -167,6 +167,10 @@ int main(int argc, char** argv)
             << err_code(err.err())
            << ")"
            << std::endl;
-        return EXIT_FAILURE;
 	}
+
+#if defined(_WIN32) && !defined(__MINGW32__)
+  system("pause");
+#endif
+
 }
