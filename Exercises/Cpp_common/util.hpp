@@ -24,6 +24,9 @@ inline std::string loadProgram(std::string input)
     std::ifstream stream(input.c_str());
     if (!stream.is_open()) {
         std::cout << "Cannot open file: " << input << std::endl;
+#if defined(_WIN32) && !defined(__MINGW32__)
+        system("pause");
+#endif
         exit(1);
     }
 
