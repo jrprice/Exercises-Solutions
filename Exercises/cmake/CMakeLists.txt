@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(Exercises)
 
 # Headers used by all exercises
-include_directories(../Cpp_common)
+include_directories(../Cpp_common .)
 set (COMMON_HEADERS
   ../Cpp_common/cl.hpp
   ../Cpp_common/device_picker.hpp
