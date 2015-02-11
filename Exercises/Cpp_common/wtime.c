@@ -1,6 +1,7 @@
 #if defined(_WIN32) && !defined(__MINGW32__)
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+#include <stdint.h>
 #else
 #ifdef _OPENMP
 #include <omp.h>
