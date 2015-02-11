@@ -41,5 +41,9 @@ int main ()
     pi = step * sum;
     double run_time = static_cast<double>(timer.getTimeMilliseconds()) / 1000.0;
     printf("\n pi with %ld steps is %lf in %lf seconds\n", num_steps, pi, run_time);
+
+#if defined(_WIN32) && !defined(__MINGW32__)
+    system("pause");
+#endif
 }
 
